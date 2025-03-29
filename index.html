@@ -5,7 +5,24 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>This is my first webpage, and I built it myself!</p>
+    <video autoplay loop muted playsinline id="bg-video">
+    <source src="pith video Sans.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+    }
+    #bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+</style>
 </body>
 </html>
