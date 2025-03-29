@@ -25,17 +25,17 @@
             object-fit: cover;
         }
 
-        /* Centered Logo */
+        /* Top-Centered Logo */
         #logo-container {
             position: fixed;
-            top: 50%;
+            top: 5%; /* Adjust to move up/down */
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, 0);
             z-index: 100;
         }
 
         #logo {
-            height: 150px; /* Adjust size here */
+            height: 300px; /* Twice as big */
         }
     </style>
 </head>
@@ -47,7 +47,7 @@
         Your browser does not support the video tag.
     </video>
 
-    <!-- Centered Logo -->
+    <!-- Top-Centered Logo -->
     <div id="logo-container">
         <img src="pith logo transparent .png" alt="Pith Logo" id="logo">
     </div>
