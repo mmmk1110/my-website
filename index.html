@@ -1,73 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pith - Digital Art</title>
+    <style>
+        /* Reset default margins */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: sans-serif;
+        }
+
+        /* Fullscreen background video */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        /* Floating Logo */
+        #logo-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        #logo {
+            height: 60px;
+        }
+
+        /* Minimal Floating Menu */
+        #menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        #menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 18px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        #menu a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Background Video -->
     <video autoplay loop muted playsinline id="bg-video">
-    <source src="pith video Sans.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-        <div id="logo-container">
-    <img src="pith logo transparent .png" alt="Pith Logo" id="logo">
-</div>
+        <source src="pith video Sans.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-<div id="menu">
-    <a href="#">Gallery</a>
-    <a href="#">About</a>
-    <a href="#">Shop</a>
-</div>
+    <!-- Floating Logo -->
+    <div id="logo-container">
+        <img src="pith logo transparent .png" alt="Pith Logo" id="logo">
+    </div>
 
-<style>
-    #logo-container {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        z-index: 100;
-    }
+    <!-- Minimal Floating Menu -->
+    <div id="menu">
+        <a href="#">Gallery</a>
+        <a href="#">About</a>
+        <a href="#">Shop</a>
+    </div>
 
-    #logo {
-        height: 60px;
-    }
-
-    #menu {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 100;
-    }
-
-    #menu a {
-        color: white;
-        text-decoration: none;
-        margin-left: 15px;
-        font-size: 18px;
-        font-family: sans-serif;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 8px 12px;
-        border-radius: 5px;
-        transition: 0.3s;
-    }
-
-    #menu a:hover {
-        background: rgba(255, 255, 255, 0.3);
-    }
-</style>
-</video>
-
-<style>
-    body {
-        margin: 0;
-        overflow: hidden;
-    }
-    #bg-video {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-    }
-</style>
 </body>
 </html>
