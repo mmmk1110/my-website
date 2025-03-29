@@ -50,12 +50,19 @@
 <body>
 
     <!-- Background Video -->
-    <video id="background-video" autoplay loop muted>
+    <video id="background-video" autoplay muted>
         <source src="pith video Sans.mp4" type="video/mp4">
     </video>
 
     <!-- Logo -->
     <img id="logo" src="P_LOGO_-removebg-preview.png" alt="Pith Logo">
+
+    <script>
+        // Pause video at the last frame
+        document.getElementById("background-video").addEventListener("ended", function() {
+            this.pause();
+        });
+    </script>
 
 </body>
 </html>
