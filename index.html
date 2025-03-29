@@ -25,17 +25,22 @@
             object-fit: cover;
         }
 
-        /* Top-Centered Logo */
-        #logo-container {
+        /* Header Styling */
+        #header {
             position: fixed;
-            top: 5%; /* Adjust to move up/down */
-            left: 50%;
-            transform: translate(-50%, 0);
+            top: 0;
+            width: 100%;
+            height: 100px; /* Adjust header height */
+            background: rgba(0, 0, 0, 0.3); /* Slight transparent background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
             z-index: 100;
         }
 
+        /* Logo inside header */
         #logo {
-            height: 300px; /* Twice as big */
+            height: 80px; /* Back to original size */
         }
     </style>
 </head>
@@ -47,8 +52,8 @@
         Your browser does not support the video tag.
     </video>
 
-    <!-- Top-Centered Logo -->
-    <div id="logo-container">
+    <!-- Header with Centered Logo -->
+    <div id="header">
         <img src="pith logo transparent .png" alt="Pith Logo" id="logo">
     </div>
 
