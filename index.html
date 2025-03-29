@@ -35,15 +35,7 @@
             transform: translateX(-50%);
             width: auto;
             height: 100px;
-            opacity: 0;
-            animation: fadeIn 2s ease-in-out forwards;
-            transition: opacity 1s ease-in-out;
-        }
-
-        /* Fade-in Animation */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            transition: opacity 0.5s ease-in-out;
         }
 
     </style>
@@ -59,16 +51,8 @@
     <img id="logo" src="P_LOGO_-removebg-preview.png" alt="Pith Logo">
 
     <script>
-        // Change logo when video ends
         document.getElementById("background-video").addEventListener("ended", function() {
-            this.pause();  // Stop at the last frame
-            let logo = document.getElementById("logo");
-            logo.style.opacity = "0"; // Fade out old logo
-            
-            setTimeout(() => {
-                logo.src = "P - white .png"; // Change to new logo
-                logo.style.opacity = "1"; // Fade in new logo
-            }, 1000); // Wait 1 second before changing
+            document.getElementById("logo").src = "P - white .png"; // Instantly change logo
         });
     </script>
 
