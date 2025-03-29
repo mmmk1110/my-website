@@ -12,10 +12,9 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
             background: black;
             color: white;
-            overflow-x: hidden;
+            overflow: hidden;
         }
 
         /* Background Video */
@@ -42,16 +41,6 @@
             transform: translateX(-50%);
             width: 150px; /* Adjust logo size */
         }
-
-        /* Content Section */
-        #content {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-        }
     </style>
 </head>
 <body>
@@ -65,23 +54,6 @@
 
     <!-- Logo -->
     <img id="logo" src="P_LOGO_-removebg-preview.png" alt="Pith Logo">
-
-    <!-- Content Section (Auto-scrolls to this) -->
-    <div id="content">
-        <h1>Welcome to Pith</h1>
-        <p>Explore and experience raw, unfiltered digital art.</p>
-    </div>
-
-    <!-- Auto Scroll Script -->
-    <script>
-        const video = document.getElementById("background-video");
-
-        video.addEventListener("ended", function() {
-            setTimeout(() => {
-                document.getElementById("content").scrollIntoView({ behavior: "smooth" });
-            }, 1000); // 1s delay before scrolling
-        });
-    </script>
 
 </body>
 </html>
