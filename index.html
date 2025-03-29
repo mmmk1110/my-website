@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pith - Digital Art</title>
-    <style>
+     <style>
         /* Reset default margins */
         body, html {
             margin: 0;
@@ -13,6 +13,8 @@
             height: 100%;
             overflow: hidden;
             font-family: sans-serif;
+            opacity: 0; /* Start Invisible */
+            transition: opacity 2s ease-in-out; /* Smooth Fade Effect */
         }
 
         /* Fullscreen background video */
@@ -36,6 +38,11 @@
         }
     </style>
 </head>
+     <script>
+        window.onload = function() {
+            document.body.style.opacity = "1";
+        };
+    </script>
 <body>
 
     <!-- Background Video -->
