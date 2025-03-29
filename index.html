@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pith – Digital Art</title>
+    <title>Pith - Digital Art</title>
     <style>
         * {
             margin: 0;
@@ -12,42 +12,76 @@
         }
 
         body {
+            font-family: Arial, sans-serif;
             background: black;
-            overflow: hidden;
+            color: white;
+            overflow-x: hidden;
         }
 
         /* Background Video */
-        #background-video {
+        #video-container {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
+            width: 100%;
             height: 100vh;
-            object-fit: cover;
-            z-index: -1;
+            overflow: hidden;
         }
 
-        /* Logo Styling */
+        #background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Logo */
         #logo {
-            position: absolute;
-            top: 5%;  
+            position: fixed;
+            top: 20px;
             left: 50%;
             transform: translateX(-50%);
-            width: auto;
-            height: 100px;
+            width: 150px; /* Adjust logo size */
         }
 
+        /* Content Section */
+        #content {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Background Video -->
-    <video id="background-video" autoplay muted>
-        <source src="home page.mp4" type="video/mp4">
-    </video>
+    <!-- Video Background -->
+    <div id="video-container">
+        <video id="background-video" autoplay muted playsinline>
+            <source src="home page.mp4" type="video/mp4">
+        </video>
+    </div>
 
     <!-- Logo -->
     <img id="logo" src="P_LOGO_-removebg-preview.png" alt="Pith Logo">
+
+    <!-- Content Section (Auto-scrolls to this) -->
+    <div id="content">
+        <h1>Welcome to Pith</h1>
+        <p>Explore and experience raw, unfiltered digital art.</p>
+    </div>
+
+    <!-- Auto Scroll Script -->
+    <script>
+        const video = document.getElementById("background-video");
+
+        video.addEventListener("ended", function() {
+            setTimeout(() => {
+                document.getElementById("content").scrollIntoView({ behavior: "smooth" });
+            }, 1000); // 1s delay before scrolling
+        });
+    </script>
 
 </body>
 </html>
