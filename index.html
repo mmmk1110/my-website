@@ -35,7 +35,6 @@
             transform: translateX(-50%);
             width: auto;
             height: 100px;
-            transition: opacity 0.5s ease-in-out;
         }
 
     </style>
@@ -44,17 +43,11 @@
 
     <!-- Background Video -->
     <video id="background-video" autoplay muted>
-        <source src="pith video Sans.mp4" type="video/mp4">
+        <source src="home page.mp4" type="video/mp4">
     </video>
 
     <!-- Logo -->
     <img id="logo" src="P_LOGO_-removebg-preview.png" alt="Pith Logo">
-
-    <script>
-        document.getElementById("background-video").addEventListener("ended", function() {
-            document.getElementById("logo").src = "P - white .png"; // Instantly change logo
-        });
-    </script>
 
 </body>
 </html>
